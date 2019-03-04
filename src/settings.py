@@ -15,6 +15,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', uuid4().hex)
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+AUTH_USER_MODEL = 'beria.CustomUser'
 
 
 # Application definition
@@ -26,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'src.beria',
 ]
 
 MIDDLEWARE = [
